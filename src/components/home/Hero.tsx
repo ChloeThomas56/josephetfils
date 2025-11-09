@@ -24,7 +24,6 @@ export default function Hero() {
                 className="hero__overlay-img"
                 priority
             />
-            <div className="hero__overlay" />
             <h1 className="hero__title">
                 Joseph & Fils
             </h1>

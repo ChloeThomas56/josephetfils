@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/router";
 import { useSmoothScrolling } from "@/hooks/useSmoothScrolling";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { ProjectType } from "@/types/types";
 import CustomImage from "../ui/CustomImage";
@@ -10,6 +12,7 @@ export default function ProjectDetails({ project, previousProject, nextProject }
     previousProject: ProjectType,
     nextProject: ProjectType
 }) {
+    const router = useRouter();
     const lenis = useSmoothScrolling();
     const [activeImgIndex, setActiveImgIndex] = useState(0);
     const imageRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -74,7 +77,13 @@ export default function ProjectDetails({ project, previousProject, nextProject }
 
     return (
         <div className="project">
-            <div className="project__illustration">
+            <motion.div
+                key={router.asPath}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="project__illustration"
+            >
                 <div className="project__illustration-thumbnails">
                     {project.images.map((image, index) => (
                         <div 
@@ -108,7 +117,7 @@ export default function ProjectDetails({ project, previousProject, nextProject }
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
             <div className="project__content">
                 <div className="project__content-heading">
                     <span>{project.tag}</span>
