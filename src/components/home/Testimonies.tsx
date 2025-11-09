@@ -68,6 +68,7 @@ export default function Testimonies() {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.3 }}
                                 className="icon arrow testimonies__arrow testimonies__arrow--left"
+                                aria-label="Précédent"
                                 onClick={() => {
                                     setTranslateX(prev => prev + 25);
                                     setScrollOffset(prev => prev - 1);
@@ -84,6 +85,7 @@ export default function Testimonies() {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.3 }} 
                                 className="icon arrow testimonies__arrow testimonies__arrow--right"
+                                aria-label="Suivant"
                                 onClick={() => {
                                     setTranslateX(prev => prev - 25);
                                     setScrollOffset(prev => prev + 1);

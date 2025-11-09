@@ -5,7 +5,7 @@ import L from "leaflet";
 import { MdPlace } from "react-icons/md";
 
 const iconHTML = renderToString(
-    <span className="icon icon--dark">
+    <span className="icon icon--dark" aria-label="Emplacement">
         <MdPlace size={26} />
     </span>
 );

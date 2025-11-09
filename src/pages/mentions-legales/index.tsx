@@ -15,9 +15,9 @@ export default function Legal() {
                 </div>
                 <section className="legal__info">
                     <article>
-                        <h3>
+                        <h2>
                             Éditeur
-                        </h3>
+                        </h2>
                         <p>
                             Le site <Link href="/" className="hover-fade">josephetfils.com</Link> est édité par Cédric Fouchard, entrepreneur individuel, enregistré sous le numéro SIREN 528744543 et domicilié à l&apos;adresse suivante&nbsp;: 9 Sainte-Suzanne, 56230 Questembert.
                             <br />
@@ -25,9 +25,9 @@ export default function Legal() {
                         </p>
                     </article>
                     <article>
-                        <h3>
+                        <h2>
                             Hébergeur
-                        </h3>
+                        </h2>
                         <p>
                             Le site <Link href="/" className="hover-fade">josephetfils.com</Link> est hébergé par Vercel Inc.
                             <br />
@@ -37,33 +37,33 @@ export default function Legal() {
                         </p>
                     </article>
                     <article>
-                        <h3>
+                        <h2>
                             Propriété intellectuelle
-                        </h3>
+                        </h2>
                         <p>
                             L&apos;ensemble des contenus de ce site est la propriété exclusive de Cédric Fouchard, sauf indication contraire. Toute reproduction ou représentation totale ou partielle de ce site, sans autorisation expresse, est interdite et constituerait une contrefaçon.
                         </p>
                     </article>
                     <article>
-                        <h3>
+                        <h2>
                             Données personnelles
-                        </h3>
+                        </h2>
                         <p>
                             Ce site ne collecte pas de données personnelles. Les informations fournies par les utilisateurs via le formulaire de contact sont uniquement utilisées pour répondre aux demandes et ne sont pas stockées ni partagées.
                         </p>
                     </article>
                     <article>
-                        <h3>
+                        <h2>
                             Responsabilité
-                        </h3>
+                        </h2>
                         <p>
                             Le site peut contenir des liens vers des sites externes. Nous déclinons toute responsabilité quant au contenu de ces sites et à toute éventuelle conséquence découlant de leur utilisation.
                         </p>
                     </article>
                     <article>
-                        <h3>
+                        <h2>
                             Modification
-                        </h3>
+                        </h2>
                         <p>
                             Nous nous réservons le droit de modifier les présentes mentions légales à tout moment. Il est recommandé de les consulter régulièrement pour prendre connaissance de toute mise à jour.
                         </p>

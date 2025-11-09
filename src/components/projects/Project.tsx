@@ -144,12 +144,12 @@ export default function ProjectDetails({ project, previousProject, nextProject }
                 </div>
             </div>
             <div className="project__footer--mobile">
-                <Link href={`/projets/${previousProject.slug}`}>
+                <Link href={`/projets/${previousProject.slug}`} aria-label="Project précédent">
                     <span className="icon arrow">
                         <IoIosArrowRoundBack />
                     </span>
                 </Link>
-                <Link href={`/projets/${nextProject.slug}`}>
+                <Link href={`/projets/${nextProject.slug}`} aria-label="Project suivant">
                     <span className="icon arrow">
                         <IoIosArrowRoundForward />
                     </span>
