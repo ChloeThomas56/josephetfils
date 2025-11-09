@@ -13,7 +13,7 @@ export default function ContactForm() {
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
     const [bot, setBot] = useState("");
-    const toEmail = "cedric.fouchard@wanadoo.fr";
+    const toEmail = "contact@josephetfils.com";
 
     const resetForm = () => {
         setFirstName("");
