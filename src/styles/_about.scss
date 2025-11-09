@@ -1,0 +1,98 @@
+.about {
+    h1 {
+        margin-bottom: calc(2 * var(--gutter));
+    }
+    
+    &__info {
+        border-top: var(--border);
+        border-bottom: var(--border);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        article {
+            padding: var(--cell-gutter);
+
+            &:not(:last-child) {
+                border-right: var(--border);
+            }
+
+            h3 {
+                font-size: clamp(1.7rem, 2vw, 2.1rem);
+                margin-bottom: var(--gutter);
+
+                &:before {
+                    content: '✦';
+                    display: inline-block;
+                    margin-right: 0.7rem;
+                    font-size: 0.6em;
+                }
+            }
+        }
+    }
+
+    &__portrait {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        img {
+            height: auto;
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: calc(2 * var(--gutter));
+            padding: var(--cell-gutter);
+            border-left: var(--border);
+
+            article {
+                h3 {
+                    font-size: clamp(1.7rem, 2vw, 2.1rem);
+                    margin-bottom: var(--gutter);
+
+                    &:before {
+                        content: '✦';
+                        display: inline-block;
+                        margin-right: 0.7rem;
+                        font-size: 0.6em;
+                    }
+                }
+
+                p:first-of-type {
+                    margin-bottom: var(--gutter);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .about {
+        &__info {
+            grid-template-columns: repeat(1, 1fr);
+
+            article {
+                border-right: none;
+                
+                &:not(:last-child) {
+                    border-bottom: var(--border);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        &__portrait {
+            grid-template-columns: repeat(1, 1fr);
+
+            &-body {
+                flex-direction: column-reverse;
+                border-left: none;
+                border-top: var(--border);
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.hero {
+    min-height: 40rem;
+    height: calc(100svh - var(--navbar-height) - 3rem);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige);
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &__overlay-img {
+        animation: fadeInOut 11s infinite ease-in-out;
+    }
+
+    img {
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    &__title, &__ticker-container {
+        text-align: center;
+        z-index: 10;
+        color:  #ffffff;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    &__title {
+        font-size: var(--font-size-2xl)
+    }
+
+    &__ticker-container {
+        position: absolute;
+        bottom: calc(2 * var(--gutter));
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__ticker {
+        position: relative;
+        font-family: inherit;
+        font-size: clamp(1.2rem, 2vw, 2.2rem);
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        overflow: hidden;
+        height: 1em;
+        display: inline-block;
+
+        &-words {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: 300;
+            animation: slide 6s ease-in-out infinite;
+
+            span {
+                display: inline-block;
+                white-space: nowrap;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 30rem;
+        height: calc(100svh - var(--navbar-height) - 2rem);
+
+        &__ticker-words {
+            span::after {
+                width: 4px;
+                height: 4px;
+            }
+        }
+    }
+}
+
+@keyframes fadeInOut {
+    0%     { opacity: 1; }
+    45.45% { opacity: 1; }
+    50%    { opacity: 0; }
+    95.45% { opacity: 0; }
+    100%   { opacity: 1; }
+}
+
+@keyframes slide {
+    0%, 20% {
+        transform: translateY(0%);
+    }
+    30%, 70% {
+        transform: translateY(-33.33%);
+    }
+    80%, 90% {
+        transform: translateY(-66.66%);
+    }
+    100% {
+        transform: translateY(-66.66%);
+    }
+}

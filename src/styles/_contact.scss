@@ -1,0 +1,148 @@
+.contact {
+    h1 {
+        margin-bottom: 1rem;
+    }
+    
+    &__info {
+        border-top: var(--border);
+        border-bottom: var(--border);
+        padding: var(--cell-gutter);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--cell-gutter);
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            &-title {
+                display: block;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &-map {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: var(--beige);
+        }
+    }
+}
+
+.contact-form-container {
+    border-left: var(--border);
+    padding: var(--cell-gutter);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form {
+    p {
+        font-size: var(--font-size-lg);
+        text-align: center;
+    }
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        margin: var(--cell-gutter) auto 0 auto;
+
+        .spinner {
+            position: absolute;
+            opacity: 0;
+        }
+
+        &.loading {
+            .spinner {
+                opacity: 1;
+            }
+
+            .text {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+// Leaflet
+.leaflet-control-zoom {
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+.leaflet-bar a {
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+    font-weight: normal !important;
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 1536px) {
+    .contact__info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact {
+        &__main {
+            grid-template-columns: repeat(1, 1fr);
+
+            > section:first-child {
+                order: 2;
+            }
+
+            > section:last-child {
+                order: 1;
+            }
+
+            &-map {
+                height: 400px;
+            }
+        }
+    }
+    
+    .contact-form-container {
+        border-left: none;
+        border-bottom: var(--border);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__info, .contact-form__group {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

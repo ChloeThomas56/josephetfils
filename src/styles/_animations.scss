@@ -1,6 +1,6 @@
-.nav-link {
+.link {
     position: relative;
-    display: block;
+    display: inline-block;
     height: fit-content;
     overflow: hidden;
 
@@ -19,11 +19,11 @@
     }
 
     &:hover {
-        .nav-link__text--visible {
+        .link__text--visible {
             transform: translateY(-100%);
         }
 
-        .nav-link__text--hidden {
+        .link__text--hidden {
             transform: translateY(0);
         }
     }
@@ -34,13 +34,13 @@
 }
 
 @media (max-width: 1024px) {   
-    .nav-link {
+    .link {
         &__text--hidden {
             display: none;
         }
 
         &:hover {
-            .nav-link__text--visible {
+            .link__text--visible {
                 transform: none;
             }
         }

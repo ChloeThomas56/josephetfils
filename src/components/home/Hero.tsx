@@ -1,29 +1,42 @@
-import CustomImage from "../ui/CustomImage"
+import { motion } from "motion/react";
+import CustomImage from "../ui/CustomImage";
 
 export default function Hero() {
     return (
-        <div className="hero">
-            <div className="hero__overlay" />
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="hero"
+        >
             <CustomImage
-                src="/images/home_1.jpg"
+                src="/images/hero_1.jpg"
                 fill
-                sizes="100vw"
+                sizes="95vw"
                 alt="Copeaux de bois"
+                priority
             />
-            <div className="hero__img-container">
-                <CustomImage
-                    src="/images/home_2.jpg"
-                    fill
-                    sizes="100vw"
-                    alt="Copeaux de bois"
-                />
+            <CustomImage
+                src="/images/hero_2.jpg"
+                fill
+                sizes="95vw"
+                alt="Copeaux de bois"
+                className="hero__overlay-img"
+                priority
+            />
+            <div className="hero__overlay" />
+            <h1 className="hero__title">
+                Joseph & Fils
+            </h1>
+            <div className="hero__ticker-container">
+                <div className="hero__ticker">
+                    <span className="hero__ticker-words">
+                        <span>Menuiserie</span>
+                        <span>Agencement</span>
+                        <span aria-hidden="true">Menuiserie</span>
+                    </span>
+                </div>
             </div>
-            <div className="hero__content">
-                <h1>Joseph & Fils</h1>
-                <h2>
-                    - Menuiserie -
-                </h2>
-            </div>
-        </div>
+        </motion.section>
     )
 }
