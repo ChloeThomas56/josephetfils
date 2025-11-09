@@ -20,7 +20,7 @@ const projects: ProjectType[] = [
         "name": "Placard sous escalier",
         "slug": "placard-sous-escalier",
         "tag": "Aménagement intérieur",
-        "description": "Pour ce projet, j'ai réalisé un aménagement intérieur sur mesure sous un escalier, optimisant chaque espace disponible grâce à de nombreux rangements pratiques et accessibles. Le corps du placard a été conçu en mélaminé pour sa facilité d’entretien, tandis que les portes ont été réalisées en contreplaqué Okoumé, apportant une finition élégante et chaleureuse.",
+        "description": "Pour ce projet, j'ai réalisé un aménagement intérieur sur mesure sous un escalier, optimisant chaque espace disponible grâce à de nombreux rangements pratiques et accessibles.<br/>Le corps du placard a été conçu en mélaminé pour sa facilité d’entretien, tandis que les portes ont été réalisées en contreplaqué Okoumé, apportant une finition élégante et chaleureuse.",
         "home_img": "/images/projects/escalier/escalier_1.jpg",
         "images": [
             "/images/projects/escalier/escalier_3.jpg",
